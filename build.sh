@@ -247,7 +247,7 @@ cocoapods-lint-other-subspecs)
 carthage|all)
     echo "Verifying carthage works."
 
-    set -o pipefail && carthage update && carthage build --no-skip-current
+    set -o pipefail && carthage update --use-xcframeworks && carthage build --no-skip-current --use-xcframeworks
     success="1"
     ;;
 
